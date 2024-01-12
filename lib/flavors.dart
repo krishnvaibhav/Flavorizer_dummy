@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import "constants/test_02.dart";
+import "constants/tet_01.dart";
 
 enum Flavor { apple, banana, barcelona, orange }
 
@@ -7,31 +8,14 @@ class F {
 
   static String get name => appFlavor?.name ?? '';
 
-  static String get title {
+  static Map get model {
     switch (appFlavor) {
-      case Flavor.apple:
-        return 'Apple App';
-      case Flavor.banana:
-        return 'Banana App';
       case Flavor.barcelona:
-        return 'barcelona App';
+        return BObj;
       case Flavor.orange:
-        return 'orange App';
+        return OObj1;
       default:
-        return 'title';
-    }
-  }
-
-  static Color get color {
-    switch (appFlavor) {
-      case Flavor.apple:
-        return Colors.red;
-      case Flavor.banana:
-        return Colors.yellow;
-      case Flavor.barcelona:
-        return Colors.blue;
-      default:
-        return Colors.white;
+        return {};
     }
   }
 }
